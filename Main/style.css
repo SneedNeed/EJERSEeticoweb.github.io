@@ -26,6 +26,7 @@ html, body{
     position: fixed;
     top: 0;
     box-shadow: 0px 1px 4px 0px var(--main-blue);
+    z-index: 10;
 }
 .main-title{
     padding-left: 2vw;
@@ -86,7 +87,7 @@ html, body{
     text-align: center;
     line-height: 1.2;
     font-size: 52px;
-    padding-top: 10%;
+    padding-top: 4%;
 }
 .descript-presentation{
     width: 60vw;
@@ -121,4 +122,48 @@ html, body{
 }
 .main-section{
     height: 70vh;
+    padding-top: 5vh;
+}
+.section-title{
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 36px;
+    position: relative;
+}
+.section-title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    border-radius: 16px;
+}
+.primary-background .section-title::before{
+    background: var(--light-gray);
+}
+.secondary-background .section-title::before{
+    background: var(--main-blue);
+}
+.secondary-background{
+    background: var(--light-gray);
+}
+.secondary-background .section-title{
+    color:var(--main-blue);
+}
+.grid-container{
+    display: flex;
+    width: 85vw;
+    margin: auto;
+    gap: 5vw;
+    flex-wrap: 1;
+}
+.proposal{
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 30vh;
+    padding: 1vh 2vw;
+    font-style: italic;
+    color:#4A5568;
+    border-left: var(--light-green) 5px solid;
 }
